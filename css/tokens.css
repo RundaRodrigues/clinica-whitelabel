@@ -6,6 +6,9 @@
    ============================================================ */
 
 :root {
+  /* Corrige scrollbar, inputs nativos e selects no SO. */
+  color-scheme: light;
+
   --primary:        #1d5fd6;
   --primary-hover:  #1a4fb3;
   --primary-soft:   #e4edfd;

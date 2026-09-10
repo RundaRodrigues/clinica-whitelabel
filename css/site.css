@@ -67,7 +67,8 @@
   font-size: 13px;
   font-weight: 600;
   color: var(--muted);
-  transition: all var(--dur) var(--ease);
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease);
 }
 .slot:hover, .slot.is-active {
   border-color: var(--primary);
