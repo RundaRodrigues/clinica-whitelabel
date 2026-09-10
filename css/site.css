@@ -238,3 +238,16 @@
 .cta-band p { margin-top: 8px; color: rgba(255, 255, 255, .7); font-size: 15px; max-width: 52ch; }
 .cta-band .btn-primary { background: #fff; color: var(--surface-deep); }
 .cta-band .btn-primary:hover { background: #e8edf6; }
+
+/* ---------- ajustes de celular ---------- */
+
+@media (max-width: 860px) {
+  .plan-chip { font-size: 14px; padding: 11px 18px; }
+  .slot { min-height: 44px; }
+}
+
+/* O base.css tenta 12px aqui, mas este arquivo carrega depois e vence.
+   A regra precisa morar junto da definicao original de .contact-item .k. */
+@media (max-width: 860px) {
+  .contact-item .k { font-size: 12px; }
+}
