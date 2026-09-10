@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Clinica Medica — modelo white label</title>
-<meta name="description" content="Modelo de site white label para clinicas medicas multiespecialidades.">
+<title>Clínica Médica — modelo white label</title>
+<meta name="description" content="Modelo de site white label para clínicas médicas multiespecialidades.">
 <meta name="theme-color" content="#1d5fd6">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Pular para o conteudo</a>
+<a class="skip-link" href="#main" data-b="ui.pularConteudo">Pular para o conteúdo</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
@@ -48,16 +48,16 @@
       <span class="logo-mark" data-b="sigla" translate="no">CN</span>
       <span data-b="nome" translate="no">Clinica Nucleo</span>
     </a>
-    <nav class="nav" id="nav-menu" data-nav-menu aria-label="Navegacao principal">
-      <a href="#especialidades">Especialidades</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#equipe">Corpo clinico</a>
-      <a href="#faq">Duvidas</a>
-      <a href="#contato">Agendar</a>
-      <a class="btn btn-primary" href="#contato">Agendar consulta</a>
+    <nav class="nav" id="nav-menu" data-nav-menu aria-label="Navegação principal">
+      <a href="#especialidades" data-b="nav.especialidades">Especialidades</a>
+      <a href="#como-funciona" data-b="nav.comoFunciona">Como funciona</a>
+      <a href="#equipe" data-b="nav.equipe">Corpo clínico</a>
+      <a href="#faq" data-b="nav.faq">Dúvidas</a>
+      <a href="#contato" data-b="nav.agendar">Agendar</a>
+      <a class="btn btn-primary" href="#contato" data-b="nav.cta">Agendar consulta</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-primary" href="#contato">Agendar consulta</a>
+      <a class="btn btn-primary" href="#contato" data-b="nav.cta">Agendar consulta</a>
       <button class="nav-toggle" data-nav-toggle aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menu">
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -87,30 +87,24 @@
       <p data-b="agendamento.subtitulo"></p>
       <form class="form-rows" data-form novalidate>
         <div class="field">
-          <label for="b-nome">Nome completo</label>
-          <input id="b-nome" name="Nome" autocomplete="name" spellcheck="false" type="text" placeholder="Ex.: Maria Silva…" required>
+          <label for="b-nome" data-b="agendamento.labelNome"></label>
+          <input id="b-nome" name="Nome" autocomplete="name" spellcheck="false" type="text" data-battr="placeholder:agendamento.hintNome" required>
         </div>
         <div class="field">
-          <label for="b-tel">WhatsApp</label>
-          <input id="b-tel" name="WhatsApp" autocomplete="tel" inputmode="tel" spellcheck="false" type="tel" placeholder="Ex.: (51) 99999-0000" required>
+          <label for="b-tel" data-b="agendamento.labelWhats"></label>
+          <input id="b-tel" name="WhatsApp" autocomplete="tel" inputmode="tel" spellcheck="false" type="tel" data-battr="placeholder:agendamento.hintWhats" required>
         </div>
         <div class="field">
-          <label for="b-esp">Especialidade</label>
-          <select id="b-esp" name="Especialidade" autocomplete="off">
-            <option>Clinica geral</option><option>Cardiologia</option><option>Dermatologia</option>
-            <option>Ortopedia</option><option>Pediatria</option><option>Ginecologia</option>
-            <option>Neurologia</option><option>Oftalmologia</option><option>Outra</option>
-          </select>
+          <label for="b-esp" data-b="agendamento.labelEspecialidade"></label>
+          <select id="b-esp" name="Especialidade" autocomplete="off" data-list-options="servicos.especialidades"></select>
         </div>
         <div class="field">
-          <label for="b-turno">Turno preferido</label>
-          <select id="b-turno" name="Turno" autocomplete="off">
-            <option>Manha</option><option>Tarde</option><option>Primeiro horario livre</option>
-          </select>
+          <label for="b-turno" data-b="agendamento.labelTurno"></label>
+          <select id="b-turno" name="Turno" autocomplete="off" data-list-options="agendamento.turnos"></select>
         </div>
         <button class="btn btn-primary btn-block" type="submit" data-b="agendamento.cta"></button>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        <p class="form-note">Abrimos o WhatsApp com o pedido pronto. Nenhum dado fica salvo no site.</p>
+        <p class="form-note" data-b="agendamento.nota"></p>
       </form>
     </div>
   </div>
@@ -248,19 +242,19 @@
       <div class="contact-list">
         <a class="contact-item" data-battr="href:_links.whatsapp" target="_blank" rel="noopener">
           <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg></span>
-          <span><span class="k">WhatsApp</span><span class="v" data-b="contato.whatsappLabel"></span></span>
+          <span><span class="k" data-b="contatoSecao.chaves.whatsapp"></span><span class="v" data-b="contato.whatsappLabel"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.telefone">
           <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></span>
-          <span><span class="k">Telefone</span><span class="v" data-b="contato.telefoneLabel"></span></span>
+          <span><span class="k" data-b="contatoSecao.chaves.telefone"></span><span class="v" data-b="contato.telefoneLabel"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.mapa" target="_blank" rel="noopener">
           <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg></span>
-          <span><span class="k">Endereco</span><span class="v" data-b="contato.endereco"></span></span>
+          <span><span class="k" data-b="contatoSecao.chaves.endereco"></span><span class="v" data-b="contato.endereco"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.email">
           <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>
-          <span><span class="k">E-mail</span><span class="v" data-b="contato.email"></span></span>
+          <span><span class="k" data-b="contatoSecao.chaves.email"></span><span class="v" data-b="contato.email"></span></span>
         </a>
       </div>
     </div>
@@ -268,21 +262,21 @@
     <form class="card contact-form" data-form data-reveal data-delay="1" novalidate>
       <div class="form-rows">
         <div class="row-2">
-          <div class="field"><label for="f-nome">Nome completo</label><input id="f-nome" name="Nome" autocomplete="name" spellcheck="false" type="text" placeholder="Ex.: Maria Silva…" required></div>
-          <div class="field"><label for="f-tel">WhatsApp</label><input id="f-tel" name="WhatsApp" autocomplete="tel" inputmode="tel" spellcheck="false" type="tel" placeholder="Ex.: (51) 99999-0000" required></div>
+          <div class="field"><label for="f-nome" data-b="contatoSecao.form.nome"></label><input id="f-nome" name="Nome" autocomplete="name" spellcheck="false" type="text" data-battr="placeholder:contatoSecao.form.nomeHint" required></div>
+          <div class="field"><label for="f-tel" data-b="contatoSecao.form.whats"></label><input id="f-tel" name="WhatsApp" autocomplete="tel" inputmode="tel" spellcheck="false" type="tel" data-battr="placeholder:contatoSecao.form.whatsHint" required></div>
         </div>
         <div class="row-2">
-          <div class="field"><label for="f-esp">Especialidade</label>
-            <select id="f-esp" name="Especialidade" autocomplete="off"><option>Clinica geral</option><option>Cardiologia</option><option>Dermatologia</option><option>Ortopedia</option><option>Pediatria</option><option>Outra</option></select>
+          <div class="field"><label for="f-esp" data-b="contatoSecao.form.especialidade"></label>
+            <select id="f-esp" name="Especialidade" autocomplete="off" data-list-options="servicos.especialidades"></select>
           </div>
-          <div class="field"><label for="f-conv">Convenio</label>
-            <select id="f-conv" name="Convenio" autocomplete="off"><option>Particular</option><option>Unimed</option><option>Bradesco Saude</option><option>SulAmerica</option><option>Amil</option><option>IPE Saude</option><option>Outro</option></select>
+          <div class="field"><label for="f-conv" data-b="contatoSecao.form.convenio"></label>
+            <select id="f-conv" name="Convenio" autocomplete="off" data-list-options="contatoSecao.form.convenios"></select>
           </div>
         </div>
-        <div class="field"><label for="f-msg">Motivo da consulta</label><textarea id="f-msg" name="Mensagem" autocomplete="off" placeholder="Ex.: dor no joelho ha 3 semanas ao subir escada…"></textarea></div>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Solicitar agendamento</button>
+        <div class="field"><label for="f-msg" data-b="contatoSecao.form.mensagem"></label><textarea id="f-msg" name="Mensagem" autocomplete="off" data-battr="placeholder:contatoSecao.form.mensagemHint"></textarea></div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" data-b="contatoSecao.form.enviar"></button>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        <p class="form-note">Abrimos o WhatsApp com sua solicitacao pronta. Nenhum dado fica salvo no site.</p>
+        <p class="form-note" data-b="contatoSecao.form.nota"></p>
       </div>
     </form>
   </div>
@@ -297,21 +291,21 @@
         <span class="logo" style="color:var(--footer-fg)"><span class="logo-mark" data-b="sigla" translate="no"></span><span data-b="nome" translate="no"></span></span>
         <p style="margin-top:16px;max-width:38ch;opacity:.7;font-size:15px" data-b="rodape.sobre"></p>
       </div>
-      <div><h4>Navegacao</h4><div class="footer-links">
-        <a href="#especialidades">Especialidades</a><a href="#como-funciona">Como funciona</a><a href="#equipe">Corpo clinico</a><a href="#faq">Duvidas</a>
+      <div><h4 data-b="rodape.colNavegacao"></h4><div class="footer-links">
+        <a href="#especialidades" data-b="nav.especialidades">Especialidades</a><a href="#como-funciona" data-b="nav.comoFunciona">Como funciona</a><a href="#equipe" data-b="nav.equipe">Corpo clínico</a><a href="#faq" data-b="nav.faq">Dúvidas</a>
       </div></div>
-      <div><h4>Contato</h4><div class="footer-links">
+      <div><h4 data-b="rodape.colContato"></h4><div class="footer-links">
         <a data-battr="href:_links.whatsapp" target="_blank" rel="noopener" data-b="contato.whatsappLabel"></a>
         <a data-battr="href:_links.telefone" data-b="contato.telefoneLabel"></a>
         <a data-battr="href:_links.email" data-b="contato.email"></a>
       </div></div>
-      <div><h4>Onde estamos</h4>
+      <div><h4 data-b="rodape.colOnde"></h4>
         <div class="footer-links"><a data-battr="href:_links.mapa" target="_blank" rel="noopener" data-b="contato.endereco"></a></div>
         <div class="footer-links" style="margin-top:16px" data-list="redes"><template><a href="{{url}}" target="_blank" rel="noopener">{{nome}}</a></template></div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <span data-year></span> <span data-b="nome" translate="no"></span>. Todos os direitos reservados.</span>
+      <span>&copy; <span data-year></span> <span data-b="nome" translate="no"></span>. <span data-b="rodape.direitos"></span></span>
       <span data-b="rodape.aviso"></span>
     </div>
   </div>
